@@ -10,9 +10,9 @@ def my_function2(n):
     if n == 0:
         return [0, 0, 0]
     elif n % 2 != 0:
-        return [n1 + n2 for n1, n2 in zip([n, 0, n], my_function2(n - 1))]
+        return (n1 + n2 for n1, n2 in zip((n, 0, n), my_function2(n - 1)))
     else:
-        return [n1 + n2 for n1, n2 in zip([n, n, 0], my_function2(n - 1))]
+        return (n1 + n2 for n1, n2 in zip((n, n, 0), my_function2(n - 1)))
 
 
 def my_function3():
